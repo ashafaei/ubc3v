@@ -12,12 +12,12 @@ The nature of the data is similar to the data used in the famous Kinect paper of
 In Shafaei and Little [2] we show that a convolutional neural network (CNN) trained on this dataset can effortlessly generalize to real-world depth data.
 
 ## Sub-datasets
-The UBC3V datasets consists of three sub-datasets:
+The UBC3V dataset consists of three sub-datasets:
 
 | Subset        | Postures            | #Characters  | Samples |
-| ------------- |:-------------------:| ------------:|:-------:|
-| easy-pose     | simple (~10k)       | 1            | 1 mil.  |
-| inter-pose    | intermediate (100k) | 1            | 1.3 mil.|
+| ------------- |:-------------------:|:------------:|:-------:|
+| easy-pose     | simple (~10k)       | 1            | 1 m     |
+| inter-pose    | intermediate (100k) | 1            | 1.3 m   |
 | hard-pose     | hard (100k)         | 16           | 300 k   |
 
 ## UBC3V Toolkit
