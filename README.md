@@ -24,7 +24,9 @@ The easy-pose, as the name indicates, is an easy sub-problem with a limited set 
 The inter-pose includes all the postures, but with only one character. Finally, hard-pose includes all the postures and the above 16 characters.
 The progression in the dataset difficulty is particularly useful for curriculum learning [3] applications.
 
+<center>
 ![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/samples.png "Samples")
+</center>
 
 ## UBC3V Toolkit
 The Matlab toolkit for UBC 3 View Dataset.
