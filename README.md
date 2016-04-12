@@ -9,7 +9,7 @@ The nature of the data is similar to the data used in the famous Kinect paper of
 * The dataset has three randomly located cameras for each pose, which makes it suitable for multiview pose estimation settings.
 * It is freely available to the public.
 
-In our paper [2] we show that a convolutional neural network (CNN) trained on this dataset can effortlessly generalize to real-world depth data.
+In Shafaei and Little [2] we show that a convolutional neural network (CNN) trained on this dataset can effortlessly generalize to real-world depth data.
 ## UBC3V Toolkit
 The Matlab toolkit for UBC 3 View Dataset.
 
