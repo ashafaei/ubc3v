@@ -29,7 +29,7 @@ The progression in the dataset difficulty is particularly useful for curriculum 
 </center>
 
 ## UBC3V Toolkit
-The Matlab toolkit for UBC 3 View Dataset.
+The Matlab toolkit for UBC 3 View Dataset. <b> work in progress </b>
 
 ## References
 1. Shotton, Jamie, et al. "Real-time human pose recognition in parts from single depth images". Communications of the ACM 56.1 (2013): 116-124.
