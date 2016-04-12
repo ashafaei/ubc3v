@@ -22,6 +22,7 @@ The UBC3V dataset consists of three sub-datasets:
 
 The easy-pose, as the name indicates, is an easy sub-problem with a limited set of postures (mostly walking and running) and only one character.
 The inter-pose includes all the postures, but with only one character. Finally, hard-pose includes all the postures and the above 16 characters.
+The progression in the dataset difficulty is particularly useful for curriculum learning [3] applications.
 
 ## UBC3V Toolkit
 The Matlab toolkit for UBC 3 View Dataset.
@@ -30,3 +31,5 @@ The Matlab toolkit for UBC 3 View Dataset.
 [1] Shotton, Jamie, et al. "Real-time human pose recognition in parts from single depth images". Communications of the ACM 56.1 (2013): 116-124.
 
 [2] Shafaei, Alireza, Little, James J.. "Real-Time Human Motion Capture with Multiple Depth Cameras". 13th Conference on Computer and Robot Vision, 2016.
+
+[3] Bengio, Yoshua, et al. "Curriculum learning." Proceedings of the 26th annual international conference on machine learning. ACM, 2009.
