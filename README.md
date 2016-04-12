@@ -16,9 +16,9 @@ The UBC3V dataset consists of three sub-datasets:
 
 | Subset        | Postures            | #Characters  | Samples |
 | ------------- |:-------------------:|:------------:|:-------:|
-| easy-pose     | simple (~10k)       | 1            | 1 m     |
-| inter-pose    | intermediate (100k) | 1            | 1.3 m   |
-| hard-pose     | hard (100k)         | 16           | 300 k   |
+| easy-pose     | simple (~10k)       | 1            | 1 m   x  |
+| inter-pose    | all (100k)          | 1            | 1.3 m   |
+| hard-pose     | all (100k)          | 16           | 300 k   |
 
 ## UBC3V Toolkit
 The Matlab toolkit for UBC 3 View Dataset.
