@@ -20,6 +20,9 @@ The UBC3V dataset consists of three sub-datasets:
 | inter-pose    | all (100k)          | 1            | 1.3 m   |
 | hard-pose     | all (100k)          | 16           | 300 k   |
 
+The easy-pose, as the name indicates, is an easy sub-problem with a limited set of postures (mostly walking and running) and only one character.
+The inter-pose includes all the postures, but with only one character. Finally, hard-pose includes all the postures and the above 16 characters.
+
 ## UBC3V Toolkit
 The Matlab toolkit for UBC 3 View Dataset.
 
