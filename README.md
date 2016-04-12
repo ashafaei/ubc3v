@@ -6,7 +6,8 @@ The nature of the data is similar to the data used in the famous Kinect paper of
 
 * The dataset distinguishes the back-front and left-right sides of the body.
 * The camera location is relatively unconstrained.
-* It is freely available to the public!
+* The dataset has three randomly located camera for each pose, which makes it suitable for multiview pose estimation settings.
+* It is freely available to the public.
 
 ## UBC3V Toolkit
 The Matlab toolkit for UBC 3 View Dataset.
