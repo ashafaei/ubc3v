@@ -50,6 +50,8 @@ Furthermore, each *train*, *valid*, or *test* splits the data into **n** section
 			* Cam 2
 			* Cam 3
 
+Each section has a `groundtruth.mat` file that contains the **posture** and the **extrinsic camera parameters** for the images. Note that the intrinsic camera parameters of our dataset is identical to that of `Kinect 2` depth camera.
+
 ## UBC3V Toolkit
 The Matlab toolkit for UBC 3 View Dataset facilitates data access and use in Matlab. Grab a copy of this project and navigate through the root folder in matlab.
 Run `init` to initialize the script.
