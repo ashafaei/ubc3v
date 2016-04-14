@@ -83,8 +83,9 @@ The script `demo_render.m` is a good starting point to learn to use the toolkit.
 ![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/sample_merged.png "Samples merged colored")
 
 ### Useful functions
-
-```load_multicam('easy-pose', 'train', 150, 1:10);```
+use the `load_multicam` function to load samples. For exmaple
+```instances = load_multicam('easy-pose', 'train', 150, 1:10);```
+returns an array `instances` from the section 150 of the *train* set in `easy-pose`. The fourth parameter is optional and indicates the indices of the samples to load from that section. If you don't need all the samples in the section this gives you a speed up.
 
 ## References
 1. Shotton, Jamie, et al. "Real-time human pose recognition in parts from single depth images". Communications of the ACM 56.1 (2013): 116-124.
