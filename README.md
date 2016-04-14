@@ -121,6 +121,25 @@ subplot(2, 3, 4); imshow(instance.Cam1.class_image.cdata);
 subplot(2, 3, 5); imshow(instance.Cam2.class_image.cdata);
 subplot(2, 3, 6); imshow(instance.Cam3.class_image.cdata);
 ```
+___
+In order to generate the point-cloud we need the depth-map table from a `Kinect 2` sensor. This toolkit contains a copy of this table in the file `/metadata/mapper.mat`. Let's load the `mapper` because we will need it in the following exmaples.
+
+```matlab
+map_file = load('mapper.mat');
+mapper = map_file.mapper;
+clear map_file;
+```
+
+use `generate_cloud_camera` to generate a point cloud from a camera.
+```matlab
+[ cloud, labels, full_cloud, full_colors, mask ] = generate_cloud_camera( instance.Cam1, mapper );
+```
+* `cloud` is a *N x 3* list of (x, y, z), the particles of our point-cloud.
+* `labels` is a *N x 1* list of the corresponding labels (groundtruth).
+* `full_cloud` is a *M x 3* unmasked list of (x, y, z).
+* `full_colors` is a *M x 1* unamsked list of the labels (groundtruth).
+* `mask` is a *512 x 424* logical matrix indicating the mask of the person.
+
 
 ## References
 1. Shotton, Jamie, et al. "Real-time human pose recognition in parts from single depth images". Communications of the ACM 56.1 (2013): 116-124.
