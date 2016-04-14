@@ -84,9 +84,7 @@ The script `demo_render.m` is a good starting point to learn to use the toolkit.
 
 ### Useful functions
 
-* ```matlab
-load_multicam('easy-pose', 'train', 150, 1:10);
-```
+```load_multicam('easy-pose', 'train', 150, 1:10);```
 
 ## References
 1. Shotton, Jamie, et al. "Real-time human pose recognition in parts from single depth images". Communications of the ACM 56.1 (2013): 116-124.
