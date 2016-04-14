@@ -57,12 +57,12 @@ In the next section we show how you can use this toolkit to:
 
 * Easily access the data.
 * Generate point cloud from the depth image.
-* Use the extrinsic camera paramters to merge the generated point clouds from different viewpoints.
+* Use the extrinsic camera parameters to merge the generated point clouds from different viewpoints.
 * Draw the posture in the reference coordinate space.
 * Generate a groundtruth class image to feed to a CNN.
 
 ## UBC3V Toolkit
-The Matlab toolkit for UBC 3 View Dataset facilitates data access and use in Matlab. Grab a copy of this project and navigate through the root folder in matlab.
+The Matlab toolkit for UBC 3 View Dataset facilitates data access and use in Matlab. Grab a copy of this project and navigate to the root folder in Matlab.
 Run `init` to initialize the script.
 
 ### UBC3V Configuration
@@ -71,6 +71,16 @@ The `config.m` script contains the parameters that you need to set before you ca
 1. `easy_pose_path` must be set to the root folder of the *easy-pose* dataset.
 2. `inter_pose_path` must be set to the root folder of the *inter-pose* dataset.
 3. `hard_pose_path` must be set to the root folder of the *hard-pose* dataset.
+
+Don't forget to add the trailing `/` in the paths. Now you're ready to use the toolkit.
+
+### Demo
+The script `demo_render.m` is a good starting point to learn to use the toolkit. This script reads samples from the dataset and visualizes the merged colored point-cloud. The output figures should look like this:
+
+![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/sample_cameras.png "Samples per camera")
+![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/sample_merged-2.png "Samples merged")
+![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/sample_merged.png "Samples merged colored")
+
 
 ## References
 1. Shotton, Jamie, et al. "Real-time human pose recognition in parts from single depth images". Communications of the ACM 56.1 (2013): 116-124.
