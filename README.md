@@ -75,13 +75,18 @@ The `config.m` script contains the parameters that you need to set before you ca
 Don't forget to add the trailing `/` in the paths. Now you're ready to use the toolkit.
 
 ### Demo
-The script `demo_render.m` is a good starting point to learn to use the toolkit. This script reads samples from the dataset and visualizes the merged colored point-cloud. The output figures should look like this:
+The script `demo_render.m` is a good starting point to learn to use the toolkit. This script reads a sample from the *easy-pose* dataset and visualizes the merged colored point-cloud. The output figures should look like this:
 
 ![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/sample_cameras.png "Samples per camera")
 
 ![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/sample_merged-2.png "Samples merged")
 ![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/sample_merged.png "Samples merged colored")
 
+### Useful functions
+
+* ```matlab
+load_multicam('easy-pose', 'train', 150, 1:10);
+```
 
 ## References
 1. Shotton, Jamie, et al. "Real-time human pose recognition in parts from single depth images". Communications of the ACM 56.1 (2013): 116-124.
