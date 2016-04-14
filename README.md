@@ -28,8 +28,38 @@ The progression in the dataset difficulty is particularly useful for curriculum 
 ![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/samples.png "Samples")
 </center>
 
+## Dataset Structure
+Each sub-dataset has its own *train*, *valid*, and *test* set, therefore, it is organized into three folders:
+
+* sub-dataset
+	* train
+	* valid
+	* test
+
+Furthermore, each *train*, *valid*, or *test* splits the data into **n** sections (n varies). So the tuple ('easy-pose', 'train', 12), refers to the section *12* of the *train* set of the *easy-pose* dataset. Each section is organized as follows:
+
+* Section i
+	* groundtruth.mat
+	* images
+		* depthRender
+			* Cam 1
+			* Cam 2
+			* Cam 3
+		* groundtruth
+			* Cam 1
+			* Cam 2
+			* Cam 3
+
 ## UBC3V Toolkit
-The Matlab toolkit for UBC 3 View Dataset. <b> work in progress </b>
+The Matlab toolkit for UBC 3 View Dataset facilitates data access and use in Matlab. Grab a copy of this project and navigate through the root folder in matlab.
+Run `init` to initialize the script.
+
+### UBC3V Configuration
+The `config.m` script contains the parameters that you need to set before you can use UBC3V Toolkit.
+
+1. `easy_pose_path` must be set to the root folder of the *easy-pose* dataset.
+2. `inter_pose_path` must be set to the root folder of the *inter-pose* dataset.
+3. `hard_pose_path` must be set to the root folder of the *hard-pose* dataset.
 
 ## References
 1. Shotton, Jamie, et al. "Real-time human pose recognition in parts from single depth images". Communications of the ACM 56.1 (2013): 116-124.
