@@ -142,6 +142,8 @@ use `generate_cloud_camera` to generate a point cloud from a camera.
 * `full_colors` is a *M x 1* unamsked list of the labels (groundtruth).
 * `mask` is a *512 x 424* logical matrix indicating the mask of the person.
 
+The returned cloud is in the reference coordinate space, meaning that you can merge the point clouds by concatenation of the `cloud` matrix.
+
 use `convert_to_zdepth` to convert the 8-bit input depth image to actual depth values. The output unit is *cm*.
 
 ```matlab
