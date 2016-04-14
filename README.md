@@ -136,11 +136,25 @@ use `generate_cloud_camera` to generate a point cloud from a camera.
 ```
 * `cloud` is a *N x 3* list of (x, y, z), the particles of our point-cloud.
 * `labels` is a *N x 1* list of the corresponding labels (groundtruth).
-* `full_cloud` is a *M x 3* unmasked list of (x, y, z).
+* `full_cloud` is a *M x 3* unmasked list of (x, y, z). (*M=512x424*)
 * `full_colors` is a *M x 1* unamsked list of the labels (groundtruth).
 * `mask` is a *512 x 424* logical matrix indicating the mask of the person.
 
+use `convert_to_zdepth` to convert the 8-bit input depth image to actual depth values. The output unit is *cm*.
 
+```matlab
+zdepth = convert_to_zdepth(camera.depth_image.cdata);
+```
+
+use `get_classes_from_image` to get the class indices from the colorful groundtruth.
+
+```matlab
+[classes, labels_full] = get_classes_from_image(camera.class_image);
+```
+
+`classes` has a list of pixels for each class. `labels_full` is a dense 424x512 matrix with class indices. You can use `labels_full` to train a CNN.
+
+(*More information will be added later*)
 ## References
 1. Shotton, Jamie, et al. "Real-time human pose recognition in parts from single depth images". Communications of the ACM 56.1 (2013): 116-124.
 2. Shafaei, Alireza, Little, James J.. "Real-Time Human Motion Capture with Multiple Depth Cameras". 13th Conference on Computer and Robot Vision, 2016.
