@@ -16,7 +16,7 @@ In Shafaei and Little [2] we show that a convolutional neural network (CNN) trai
 If you've used this dataset, please consider citing the paper:
 ```bibtex
 @inproceedings{Shafaei16,
-  author = {Shafaei, A. and Little, J. J.},
+  author = {Shafaei, Alireza and Little, James J.},
   title = {Real-Time Human Motion Capture with Multiple Depth Cameras},
   booktitle = {Proceedings of the 13th Conference on Computer and Robot Vision},
   year = {2016},
