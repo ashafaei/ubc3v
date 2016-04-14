@@ -52,6 +52,13 @@ Furthermore, each *train*, *valid*, or *test* splits the data into **n** section
 
 Each section has a `groundtruth.mat` file that contains the **posture** and the **extrinsic camera parameters** for the images. Note that the intrinsic camera parameters of our dataset is identical to that of `Kinect 2` depth camera.
 
+In the next section we show how you can use this toolkit to:
+
+* Easily access the data.
+* Generate point cloud from the depth image.
+* Use the extrinsic camera paramters to merge the generated point clouds from different viewpoints.
+* Draw the posture in the reference coordinate space.
+
 ## UBC3V Toolkit
 The Matlab toolkit for UBC 3 View Dataset facilitates data access and use in Matlab. Grab a copy of this project and navigate through the root folder in matlab.
 Run `init` to initialize the script.
