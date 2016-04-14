@@ -13,6 +13,18 @@ The nature of the data is similar to the data used in the famous Kinect paper of
 
 In Shafaei and Little [2] we show that a convolutional neural network (CNN) trained on this dataset can effortlessly generalize to real-world depth data.
 
+If you've used this dataset, please consider citing the relevant paper:
+```bibtex
+@inproceedings{Shafaei16,
+  author = {Shafaei, A. and Little, J. J.},
+  title = {Real-Time Human Motion Capture with Multiple Depth Cameras},
+  booktitle = {Proceedings of the 13th Conference on Computer and Robot Vision},
+  year = {2016},
+  organization = {Canadian Image Processing and Pattern Recognition Society (CIPPRS)},
+  url = {http://www.cs.ubc.ca/~shafaei/homepage/projects/crv16.php}
+}
+```
+
 ## Sub-datasets
 The UBC3V dataset consists of three sub-datasets:
 
