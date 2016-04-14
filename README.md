@@ -13,7 +13,7 @@ The nature of the data is similar to the data used in the famous Kinect paper of
 
 In Shafaei and Little [2] we show that a convolutional neural network (CNN) trained on this dataset can effortlessly generalize to real-world depth data.
 
-If you've used this dataset, please consider citing the relevant paper:
+If you've used this dataset, please consider citing the paper:
 ```bibtex
 @inproceedings{Shafaei16,
   author = {Shafaei, A. and Little, J. J.},
