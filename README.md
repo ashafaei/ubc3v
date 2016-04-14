@@ -84,7 +84,11 @@ The script `demo_render.m` is a good starting point to learn to use the toolkit.
 
 ### Useful functions
 use the `load_multicam` function to load samples. For exmaple
-```instances = load_multicam('easy-pose', 'train', 150, 1:10);```
+
+```matlab
+instances = load_multicam('easy-pose', 'train', 150, 1:10);
+```
+
 returns an array `instances` from the section 150 of the *train* set in `easy-pose`. The fourth parameter is optional and indicates the indices of the samples to load from that section. If you don't need all the samples in the section this gives you a speed up.
 
 ## References
