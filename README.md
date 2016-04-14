@@ -78,7 +78,9 @@ Don't forget to add the trailing `/` in the paths. Now you're ready to use the t
 The script `demo_render.m` is a good starting point to learn to use the toolkit. This script reads samples from the dataset and visualizes the merged colored point-cloud. The output figures should look like this:
 
 ![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/sample_cameras.png "Samples per camera")
+
 ![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/sample_merged-2.png "Samples merged")
+
 ![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/sample_merged.png "Samples merged colored")
 
 
