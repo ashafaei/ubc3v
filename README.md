@@ -89,7 +89,38 @@ use the `load_multicam` function to load samples. For exmaple
 instances = load_multicam('easy-pose', 'train', 150, 1:10);
 ```
 
-returns an array `instances` from the section 150 of the *train* set in `easy-pose`. The fourth parameter is optional and indicates the indices of the samples to load from that section. If you don't need all the samples in the section this gives you a speed up.
+returns an array `instances` from the section 150 of the *train* set in `easy-pose`. The fourth parameter is optional and indicates the indices of the samples to load from that section. If you don't need all the samples in the section this gives you a speed up. Each instance is a Matlab structure with the following data
+
+* instance
+	* Cam1
+		* translation
+		* rotation
+		* depth_image
+		* class_image
+	* Cam2
+		* translation
+		* rotation
+		* depth_image
+		* class_image
+	* Cam3
+		* translation
+		* rotation
+		* depth_image
+		* class_image
+	* posture
+
+You can visualize the instances like this
+```matlab
+figure(1);
+% Show the depth images.
+subplot(2, 3, 1); imagesc(instance.Cam1.depth_image.cdata); colormap(gray);
+subplot(2, 3, 2); imagesc(instance.Cam2.depth_image.cdata); colormap(gray);
+subplot(2, 3, 3); imagesc(instance.Cam3.depth_image.cdata); colormap(gray);
+% Show the groundtruth images.
+subplot(2, 3, 4); imshow(instance.Cam1.class_image.cdata);
+subplot(2, 3, 5); imshow(instance.Cam2.class_image.cdata);
+subplot(2, 3, 6); imshow(instance.Cam3.class_image.cdata);
+```
 
 ## References
 1. Shotton, Jamie, et al. "Real-time human pose recognition in parts from single depth images". Communications of the ACM 56.1 (2013): 116-124.
