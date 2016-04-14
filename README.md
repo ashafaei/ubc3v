@@ -1,6 +1,8 @@
 # UBC3V Dataset
 ![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/all_chars.png "UBC3V Reference Groundtruth")
 
+** Work in progress, the download link of the dataset is not released yet **
+
 UBC3V is a synthetic dataset for training and evaluation of single or multiview depth-based pose estimation techniques.
 The nature of the data is similar to the data used in the famous Kinect paper of Shotton et al. [1], but with a few distinctions:
 
@@ -154,7 +156,20 @@ use `get_classes_from_image` to get the class indices from the colorful groundtr
 
 `classes` has a list of pixels for each class. `labels_full` is a dense 424x512 matrix with class indices. You can use `labels_full` to train a CNN.
 
-(*More information will be added later*)
+use `get_pose` to get the posture from an instance.
+
+```matlab
+pose = get_pose(instance);
+```
+
+Each pose has a list of **joint names** and **joint coordinates**.
+
+You can then use `draw_pose` to draw the bones in the current figure.
+
+```matlab
+draw_pose(pose);
+```
+
 ## References
 1. Shotton, Jamie, et al. "Real-time human pose recognition in parts from single depth images". Communications of the ACM 56.1 (2013): 116-124.
 2. Shafaei, Alireza, Little, James J.. "Real-Time Human Motion Capture with Multiple Depth Cameras". 13th Conference on Computer and Robot Vision, 2016.
