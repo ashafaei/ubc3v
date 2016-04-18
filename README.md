@@ -1,8 +1,6 @@
 # UBC3V Dataset
 ![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/all_chars.png "UBC3V Reference Groundtruth")
 
-**Work in progress, the download link of the dataset is not released yet**
-
 UBC3V is a synthetic dataset for training and evaluation of single or multiview depth-based pose estimation techniques.
 The nature of the data is similar to the data used in the famous Kinect paper of Shotton et al. [1], but with a few distinctions:
 
@@ -24,6 +22,14 @@ If you've used this dataset, please consider citing the paper:
   url = {http://www.cs.ubc.ca/~shafaei/homepage/projects/crv16.php}
 }
 ```
+
+## Download Links
+
+* Download easy-pose from here: [Link](www.cs.ubc.ca/~shafaei/homepage/projects/datasets/crv16.dataset.php?easy).
+* Download inter-pose from here: [Link](www.cs.ubc.ca/~shafaei/homepage/projects/datasets/crv16.dataset.php?inter).
+* Download hard-pose from here: [Link](www.cs.ubc.ca/~shafaei/homepage/projects/datasets/crv16.dataset.php?hard).
+
+See the description of these datasets below.
 
 ## Sub-datasets
 The UBC3V dataset consists of three sub-datasets:
