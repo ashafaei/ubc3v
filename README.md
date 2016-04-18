@@ -25,9 +25,9 @@ If you've used this dataset, please consider citing the paper:
 
 ## Download Links
 
-* Download easy-pose from here (36 GB) [Link](http://www.cs.ubc.ca/~shafaei/homepage/projects/datasets/crv16.dataset.php?easy).
-* Download inter-pose from here (39 GB) [Link](http://www.cs.ubc.ca/~shafaei/homepage/projects/datasets/crv16.dataset.php?inter).
-* Download hard-pose from here (14 GB) [Link](http://www.cs.ubc.ca/~shafaei/homepage/projects/datasets/crv16.dataset.php?hard).
+* Download UBC3V easy-pose from here (36 GB) [Link](http://www.cs.ubc.ca/~shafaei/homepage/projects/datasets/crv16.dataset.php?easy).
+* Download UBC3V inter-pose from here (39 GB) [Link](http://www.cs.ubc.ca/~shafaei/homepage/projects/datasets/crv16.dataset.php?inter).
+* Download UBC3V hard-pose from here (14 GB) [Link](http://www.cs.ubc.ca/~shafaei/homepage/projects/datasets/crv16.dataset.php?hard).
 
 See the description of these datasets below.
 
