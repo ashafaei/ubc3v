@@ -42,7 +42,7 @@ The UBC3V dataset consists of three sub-datasets:
 
 The easy-pose, as the name indicates, is an easy sub-problem with a limited set of postures (mostly walking and running) and only one character.
 The inter-pose includes all the postures, but with only one character. Finally, hard-pose includes all the postures and the above 16 characters.
-The progression in the dataset difficulty is particularly useful for curriculum learning [3] applications.
+The progression in the dataset difficulty is particularly useful for curriculum learning [3] applications. More details on how this data is generated is available in our paper [2].
 
 <center>
 ![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/samples.png "Samples")
