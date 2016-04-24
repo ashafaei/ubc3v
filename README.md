@@ -22,7 +22,7 @@ If you've used this dataset, please consider citing the paper:
   url = {http://www.cs.ubc.ca/~shafaei/homepage/projects/crv16.php}
 }
 ```
-If you have any questions, you can reach me at ![shafaei.ca](http://shafaei.ca).
+If you have any questions, you can reach me at [shafaei.ca](http://shafaei.ca).
 
 ## Download Links
 
