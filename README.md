@@ -30,6 +30,12 @@ If you have any questions, you can reach me at [shafaei.ca](http://shafaei.ca).
 * Download UBC3V inter-pose from here (39 GB) [Download](http://www.cs.ubc.ca/~shafaei/homepage/projects/datasets/crv16.dataset.php?inter).
 * Download UBC3V hard-pose from here (14 GB) [Download](http://www.cs.ubc.ca/~shafaei/homepage/projects/datasets/crv16.dataset.php?hard).
 
+SHA256:
+```
+8de2ebf632709b7fb3a0c11dddd3edc0c2d13416067fc2bc54542b9dd2b52d68  easy-pose.tar.gz
+214e070a315e6e5d8d6259ec8a5eff41207de9870f8ce6775e70e6adc5418486  inter-pose.tar.gz
+7fb4a4a42c02fb278d0741665a6fe0354ce0387bc84000ff3c2595a282d0776d  hard-pose.tar.gz
+```
 See the description of these datasets below.
 
 ## Sub-datasets
