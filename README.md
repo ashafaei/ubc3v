@@ -196,6 +196,67 @@ You can then use `draw_pose` to draw the bones in the current figure.
 ```matlab
 draw_pose(pose);
 ```
+## Camera Parameters
+The point cloud generated with this library uses the Kinect-2 intrinsic parameters (as opposed to the actual intrinsic parameters of rendering). Depending on your task, the actual rendering intrinsic parameters may or may not be useful.
+According to [@floe](https://github.com/OpenKinect/libfreenect2/issues/41), two Kinect 2s had the below intrinsic parameters.
+```
+Kinect 2 number 1
+depth camera intrinsic parameters:
+fx 368.096588, fy 368.096588, cx 261.696594, cy 202.522202
+depth camera radial distortion coeffs:
+k1 0.084061, k2 -0.271582, p1 0.000000, p2 0.000000, k3 0.101907
+
+Kinect 2 number 2
+depth camera intrinsic parameters:
+fx 365.402802, fy 365.402802, cx 260.925507, cy 205.594604
+depth camera radial distortion coeffs:
+k1 0.095575, k2 -0.277055, p1 0.000000, p2 0.000000, k3 0.097539
+```
+
+These are the camera parameters that I provided to Maya
+```python
+   # preview, production
+    render_quality = 'production'
+    # These numbers are set based on Kinect 2
+    near_clip_plane = 50
+    far_clip_plane = 800
+    focal_length = 25.422
+    render_resolution = {'width':512, 'height':424}
+    render_resolution['deviceAspectRatio'] = render_resolution['width']/float(render_resolution['height'])
+```
+As a result, in the maya project file you'll get (for camera 1)
+```
+createNode lookAt -n "Cam1_group";
+	rename -uid "E01E7C8E-4263-5ADD-7B3D-0A929708A22D";
+	setAttr ".a" -type "double3" 0 0 -1 ;
+createNode transform -n "Cam1" -p "Cam1_group";
+	rename -uid "144391DA-46D7-136E-B1B9-228A5D64F3D8";
+	setAttr ".v" no;
+createNode camera -n "Cam1Shape" -p "Cam1";
+	rename -uid "BFD06DE8-4C36-31CA-A8BD-AEAE158811A1";
+	setAttr -k off ".v" no;
+	setAttr ".fl" 25.422;
+	setAttr ".ncp" 50;
+	setAttr ".fcp" 800;
+	setAttr ".coi" 206.60501080650255;
+	setAttr ".imn" -type "string" "persp";
+	setAttr ".den" -type "string" "persp_depth";
+	setAttr ".man" -type "string" "persp_mask";
+	setAttr ".hc" -type "string" "viewSet -p %camera";
+	setAttr ".bfc" no;
+createNode transform -n "Cam1_aim" -p "Cam1_group";
+	rename -uid "10BF624D-4983-D95A-6CCA-35A8E841F33A";
+	setAttr ".t" -type "double3" 1.7763568394002505e-014 -1.4210854715202004e-014 -7.1054273576010019e-015 ;
+	setAttr ".drp" yes;
+createNode locator -n "Cam1_aimShape" -p "Cam1_aim";
+	rename -uid "94271F87-4A76-4FBC-C7DE-049A1996478B";
+	setAttr -k off ".v" no;
+```
+If still not helpful, you can download this sample Maya project. [Here!](http://cs.ubc.ca/~shafaei/dataset/mayaProject.zip). Open the project in Maya and check the intrinsic parameters. From what I recall, the camera view calculates and shows every possible parameter you'd hope to see. (Maybe Blender can import/open the Maya files too).
+_There are multiple cameras defined by default, make sure you check the parameters of `cam1`,`cam2`, and `cam3`._ 
+
+## Model Files
+Are you looking for the fbx models that I used to generate this data? Download it from [here!](http://www.cs.ubc.ca/~shafaei/dataset/3dmodels.tar.gz). The models are generated using the [MakeHuman](http://www.makehuman.org/) project, with CMU conforming skeletons and a specially designed body texture, which can also be found in the above file. The texture is used to generate the groundtruth.
 
 ## References
 1. Shotton, Jamie, et al. "Real-time human pose recognition in parts from single depth images". Communications of the ACM 56.1 (2013): 116-124.
