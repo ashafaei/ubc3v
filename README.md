@@ -1,5 +1,5 @@
 # UBC3V Dataset
-![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/all_chars.png "UBC3V Reference Groundtruth")
+![alt text](metadata/all_chars.png "UBC3V Reference Groundtruth")
 
 UBC3V is a synthetic dataset for training and evaluation of single or multiview depth-based pose estimation techniques.
 The nature of the data is similar to the data used in the famous Kinect paper of Shotton et al. [1], but with a few distinctions:
@@ -51,9 +51,9 @@ The easy-pose, as the name indicates, is an easy sub-problem with a limited set 
 The inter-pose includes all the postures, but with only one character. Finally, hard-pose includes all the postures and the above 16 characters.
 The progression in the dataset difficulty is particularly useful for curriculum learning [3] applications. More details on how this data is generated is available in our paper [2].
 
-<center>
-![alt text](https://raw.githubusercontent.com/ashafaei/ubc3v/master/metadata/samples.png "Samples")
-</center>
+
+![alt text](metadata/samples.png "Samples")
+
 
 ## Dataset Structure
 Each sub-dataset has its own *train*, *valid*, and *test* set, therefore, it is organized into three folders:
