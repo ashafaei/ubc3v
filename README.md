@@ -1,6 +1,8 @@
 # UBC3V Dataset
 ![alt text](metadata/all_chars.png "UBC3V Reference Groundtruth")
 
+- **Oct 18, 2021: Links are updated.**
+
 UBC3V is a synthetic dataset for training and evaluation of single or multiview depth-based pose estimation techniques.
 The nature of the data is similar to the data used in the famous Kinect paper of Shotton et al. [1], but with a few distinctions:
 
@@ -16,19 +18,18 @@ If you've used this dataset, please consider citing the paper:
 @inproceedings{Shafaei16,
   author = {Shafaei, Alireza and Little, James J.},
   title = {Real-Time Human Motion Capture with Multiple Depth Cameras},
-  booktitle = {Proceedings of the 13th Conference on Computer and Robot Vision},
+  booktitle = {Proceedings of the 13th Conference on Computer and Robot Vision (CRV)},
   year = {2016},
   organization = {Canadian Image Processing and Pattern Recognition Society (CIPPRS)},
-  url = {http://www.cs.ubc.ca/~shafaei/homepage/projects/crv16.php}
 }
 ```
-If you have any questions, you can reach me at [shafaei.ca](http://shafaei.ca).
+If you have any questions, you can reach me at [shafaei.ai](http://shafaei.ai).
 
 ## Download Links
 
-* Download UBC3V easy-pose from here (36 GB) [Download](http://www.cs.ubc.ca/~shafaei/homepage/projects/datasets/crv16.dataset.php?easy).
-* Download UBC3V inter-pose from here (39 GB) [Download](http://www.cs.ubc.ca/~shafaei/homepage/projects/datasets/crv16.dataset.php?inter).
-* Download UBC3V hard-pose from here (14 GB) [Download](http://www.cs.ubc.ca/~shafaei/homepage/projects/datasets/crv16.dataset.php?hard).
+* Download UBC3V easy-pose from here (36 GB) [Download](https://www.cs.ubc.ca/research/UBC3V/easy-pose.tar.gz).
+* Download UBC3V inter-pose from here (39 GB) [Download](https://www.cs.ubc.ca/research/UBC3V/inter-pose.tar.gz).
+* Download UBC3V hard-pose from here (14 GB) [Download](https://www.cs.ubc.ca/research/UBC3V/hard-pose.tar.gz).
 
 SHA256:
 ```
@@ -41,11 +42,11 @@ See the description of these datasets below.
 ## Sub-datasets
 The UBC3V dataset consists of three sub-datasets:
 
-| Subset        | Postures            | #Characters  | Samples |
-| ------------- |:-------------------:|:------------:|:-------:|
-| easy-pose     | simple (~10k)       | 1            | 1 m     |
-| inter-pose    | all (100k)          | 1            | 1.3 m   |
-| hard-pose     | all (100k)          | 16           | 300 k   |
+| Subset     |   Postures    | #Characters | Samples |
+| ---------- | :-----------: | :---------: | :-----: |
+| easy-pose  | simple (~10k) |      1      |   1 m   |
+| inter-pose |  all (100k)   |      1      |  1.3 m  |
+| hard-pose  |  all (100k)   |     16      |  300 k  |
 
 The easy-pose, as the name indicates, is an easy sub-problem with a limited set of postures (mostly walking and running) and only one character.
 The inter-pose includes all the postures, but with only one character. Finally, hard-pose includes all the postures and the above 16 characters.
@@ -252,11 +253,11 @@ createNode locator -n "Cam1_aimShape" -p "Cam1_aim";
 	rename -uid "94271F87-4A76-4FBC-C7DE-049A1996478B";
 	setAttr -k off ".v" no;
 ```
-If still not helpful, you can download this sample Maya project. [Here!](http://cs.ubc.ca/~shafaei/dataset/mayaProject.zip). Open the project in Maya and check the intrinsic parameters. From what I recall, the camera view calculates and shows every possible parameter you'd hope to see. (Maybe Blender can import/open the Maya files too).
+If still not helpful, you can download this sample Maya project. [Here!](https://www.cs.ubc.ca/research/UBC3V/mayaProject.zip). Open the project in Maya and check the intrinsic parameters. From what I recall, the camera view calculates and shows every possible parameter you'd hope to see. (Maybe Blender can import/open the Maya files too).
 _There are multiple cameras defined by default, make sure you check the parameters of `cam1`,`cam2`, and `cam3`._ 
 
 ## Model Files
-Are you looking for the fbx models that I used to generate this data? Download it from [here!](http://www.cs.ubc.ca/~shafaei/dataset/3dmodels.tar.gz). The models are generated using the [MakeHuman](http://www.makehuman.org/) project, with CMU conforming skeletons and a specially designed body texture, which can also be found in the above file. The texture is used to generate the groundtruth.
+Are you looking for the fbx models that I used to generate this data? Download it from [here!](https://www.cs.ubc.ca/research/UBC3V/3dmodels.tar.gz). The models are generated using the [MakeHuman](http://www.makehuman.org/) project, with CMU conforming skeletons and a specially designed body texture, which can also be found in the above file. The texture is used to generate the groundtruth.
 
 ## References
 1. Shotton, Jamie, et al. "Real-time human pose recognition in parts from single depth images". Communications of the ACM 56.1 (2013): 116-124.
